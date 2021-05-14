@@ -5,6 +5,7 @@ CREATE TABLE book (
 	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	title VARCHAR(100) NOT NULL,
 	author VARCHAR(100) NOT NULL,
+	existance Boolean NOT NULL DEFAULT True,
 	pub_date DATE
 ); 
 
@@ -14,4 +15,4 @@ CREATE TABLE user (
 	password VARCHAR(100) NOT NULL
 );
 
-INSERT INTO user ( user , password) values ('admin', 'admin');
+INSERT INTO user ( user , password) values ('admin', MD5('admin'));

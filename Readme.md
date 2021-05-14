@@ -1,5 +1,7 @@
 # iTranslate assignment
-This is the main question
+Create a docker container that can be used to start up a fastAPI server. The
+API should contain 2-4 endpoints that interact with a MySQL table*. The design of the endpoints is completely up to you.
+
 
 # Solution
 The solution is provided via docker-compose.
@@ -8,19 +10,15 @@ Create a directory and add all the provided folders except pytest to it.
 Run the commands as bellow:
 - docker-compose build
 - docker-compose up -d db (wait for a few seconds)
-- docker-compose up
+- docker-compose up -d
  
 
 The pre-defined user/password is admin/admin.
 
-So, these are the main features of Redis Cluster Proxy:
+# Pytest
+Install pytest for python3:
+- pip3 install -U pytest requests pytest-html jsonschema
 
-- Routing: every query is automatically routed to the correct node of the cluster
-- Multithreaded
-- Both multiplexing and private connection models supported
-- Query execution and reply order are guaranteed even in multiplexing contexts
-- Automatic update of the clu
-
-
-
+Run command:
+- py.test
 
