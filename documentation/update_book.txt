@@ -1,0 +1,46 @@
+#The endpoint is "/book/lent/{item_id}" and as it is used to update the existance status of a book
+
+#The method is POST.
+
+#Request parameters has two parts. One should be provided in json format in request body and the other is a simple parameter.
+- The parameter is item_id. 
+- The schema of the request body is as follow:
+
+  {
+    "user": "string",
+    "password": "string"
+  }
+
+- The fields are as follow:
+parameter     type       required
+---------     ------     --------
+item_id       int        required
+user          string     required
+pssword       string     required
+
+
+
+# Curl Sample:
+  curl -X 'POST' \
+  'http://127.0.0.1/book/lent/1' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "user": "admin",
+  "password": "admin"
+}'
+
+
+
+#Response body parameters are in two formats:
+- Response code: 200
+  Response body includes a message
+  ex. { "message": "successfully updated!"}
+
+- Response code: 422
+  Validation error has occured
+  Response body includes a list of details
+  ex. {	"detail": [ {"loc": ["string"],"msg":"string","type": "string"}]}
+
+
+

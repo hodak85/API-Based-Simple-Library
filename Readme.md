@@ -9,11 +9,13 @@ The solution is provided via docker-compose.
 Create a directory and add all the provided folders except pytest to it.
 Run the commands as bellow:
 - docker-compose build
-- docker-compose up -d db (wait for a few seconds)
+- docker-compose up -d db (wait for a few seconds for initialization)
 - docker-compose up -d
  
 
 The pre-defined user/password is admin/admin.
+
+The documentation about endpoints are in documentation folder.
 
 # Pytest
 Install pytest for python3:

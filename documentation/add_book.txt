@@ -1,0 +1,63 @@
+#The endpoint is "/book/add" and as it is used to add new book to the library
+
+#The method is POST.
+
+#Request body should be provided in json format in . 
+- The schema is as follow:
+
+  {
+   "item": {
+    "title": "string", 
+    "author": "string",
+    "pub_date": "date" #ex format. 2021-05-14
+   },
+   "user": {
+    "user": "string",
+    "password": "string"
+   }
+  }
+
+- The fields are as follow:
+parameter     type       required
+---------     ------     --------
+title         string     required
+author        string     required
+pub_date      date       optional
+user          string     required
+pssword       string     required
+
+
+
+# Curl Sample:
+
+  curl -X 'POST' \
+  'http://127.0.0.1/book/add/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "item": {
+    "title": "a1",
+    "author": "b2",
+    "pub_date": "2021-05-14"
+  },
+  "user": {
+    "user": "admin",
+    "password": "admin"
+  }
+}'
+
+
+
+
+#Response parameters are in two formats:
+- Response code: 200
+  Response body includes a message
+  ex. { "message": "successfully inserted!"}
+
+- Response code: 422
+  Validation error has occured
+  Response body includes a list of details
+  ex. {	"detail": [ {"loc": ["string"],"msg":"string","type": "string"}]}
+
+
+

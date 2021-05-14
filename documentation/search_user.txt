@@ -1,0 +1,32 @@
+#The endpoint is "/search/users/" and as it is used to search for users
+
+#The method is GET.
+
+#Request parameters 
+
+- The fields are as follow:
+parameter     type       required
+---------     ------     --------
+usr           string     required
+pswd          string     required
+user_id       int        optional
+user          string     optional
+
+
+
+# Curl Sample:
+  curl -X 'GET' \
+  'http://127.0.0.1/search/users/?usr=admin&pswd=admin'  -H 'accept: application/json'
+
+#Response body parameters are in two formats:
+- Response code: 200
+  Response body includes the data of added book or a message
+  ex. { "id": 1,"user": "admin"}
+
+- Response code: 422
+  Validation error has occured
+  Response body includes a list of details
+  ex. {	"detail": [ {"loc": ["string"],"msg":"string","type": "string"}]}
+
+
+
