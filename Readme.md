@@ -19,7 +19,7 @@ The documentation about endpoints are in documentation folder.
 
 # Pytest
 Install pytest for python3:
-- pip3 install -U pytest requests pytest-html jsonschema
+- pip3 install -U pytest requests
 
 Run command:
 - py.test
