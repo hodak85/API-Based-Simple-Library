@@ -9,7 +9,7 @@ app = FastAPI()
 
 @app.get("/")
 def read_root():
-    return {"message": "There are two Endpoints provided addBook and books!"}
+    return {"message": "There are multiple endpoints provided! For more information check the documentation folder."}
 
 #Add new book
 @app.post("/book/add/")
