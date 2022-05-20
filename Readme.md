@@ -1,4 +1,4 @@
-# iTranslate assignment
+# API Based Simple Library
 Create a docker container that can be used to start up a fastAPI server. The
 API should contain 2-4 endpoints that interact with a MySQL table*. The design of the endpoints is completely up to you.
 
